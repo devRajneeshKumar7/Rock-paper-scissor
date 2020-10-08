@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <!--Script-->
+    <link rel="stylesheet" href="rps.css">
+
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/e0216f57bf.js" crossorigin="anonymous"></script>
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css"
+        integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark sticky-top navbar-dark container-fluid">
+        <ul class="nav nav-tabs">
+    
+            <li class="nav-item">
+                <a href="#!" class="nav-link navbar-brand">My Blog</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="#!" class="nav-link">About</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="#!" class="nav-link active">Projects</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="mailto:devrajneeshkumar7@gmail.com?subject=Feedback" class="nav-link">Contact</a>
+            </li>
+    
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="row results">
+
+            <span class="col-xl head">
+                Score: <span id="score">0</span>
+                <span class="fas fa-undo fa-sm" id="reset-score" onclick="resetScore()"></span>
+            </span>
+            <span id="state" class="col-xl head">
+                Duh...
+            </span>
+        </div>
+
+
+
+
+
+        <div class="mode row">
+
+
+            <label for="easy" class="col mode-name" title="Easy Mode" data-toggle="popover" data-trigger="hover"
+                data-placement="bottom" data-content="W/L rate is 66.6%">
+                <input type="radio" class="mode" id="easy" name="mode" onclick="easy()">
+                Easy</label>
+
+
+            <label for="normal" class="col mode-name" title="Normal Mode" data-toggle="popover" data-trigger="hover"
+                data-placement="top" data-content="W/L rate is 33.3%">
+                <input type="radio" class="mode" id="normal" name="mode" onclick="normal()" checked>
+                Normal</label>
+
+
+            <label for="hard" class="col mode-name" title="Hard Mode" data-toggle="popover" data-trigger="hover"
+                data-placement="bottom" data-content="W/L rate is 16.65%">
+                <input type="radio" class="mode" id="hard" name="mode" onclick="hard()">
+                Hard</label>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="row" id="hide">
+            <div class="col"></div>
+            <div class="col"><button class="button" onclick="playRock()">👊</button></div>
+            <div class="col"></div>
+        </div>
+
+
+
+
+
+
+        <div class="row">
+
+            <div class="col"><button id="player" class="button" onclick="playPaper()">🖐</button></div>
+            <div class="col" id="vs"></div>
+            <div class="col"><button id="enemy" class="button" onclick="playScissors()">✌</button></div>
+
+        </div>
+
+
+        <div class="row">
+            <span class="col" id="result"></span>
+        </div>
+
+
+        <div class="row">
+            <span class="col"><button id="continue" onclick="Continue()">Continue</button></span>
+        </div>
+
+    </div>
+
+
+    <footer class="container-fluid foot">
+        <nav class="navbar bg-dark">
+            <ul class="nav nav-pills justify-content-center">
+
+                <li class="nav-item">
+                    <a href="https://github.com/devRajneeshKumar7" class="nav-link">Github</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="about-me.html#my-story" class="nav-link">My Story</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#!" class="nav-link">Codes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#!" class="nav-link">Info</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="mailto:devrajneeshkumar7@gmail.com?subject=BUG in RPS" class="nav-link">Report bug</a>
+                </li>
+
+            </ul>
+        </nav>
+    </footer>
+
+
+
+
+    <script src="rps.js"></script>
+</body>
+
+</html>
